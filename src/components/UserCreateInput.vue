@@ -57,7 +57,7 @@
 
 <script>
 
-  import { apiUserAuth } from "../apis/userapi.js";
+  import { apiUserCreate } from "../apis/userapi.js";
 
   export default {
     data() {
@@ -78,13 +78,7 @@
     methods: {
       onSubmit(event) {
         event.preventDefault()
-        apiUserAuth().then(data => this.nottrue = data)
-        .then(()=> {
-          console.log(this.nottrue)
-          
-        })
-        
-        
+        apiUserCreate(this.form.username, this.form.password)
         alert(JSON.stringify(this.form))
       },
       

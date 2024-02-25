@@ -3,7 +3,7 @@
         <h1>Register Page</h1>
         <img alt="Vue logo" src="../assets/logo.png" class="headimg"> <br/>
         
-        <RegisterInput></RegisterInput>
+        <UserCreateInput></UserCreateInput>
         <br/><br/><br/>
 
         <nav class = "helpstyle">
@@ -16,7 +16,7 @@
 <script>
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
-import RegisterInput from '@/components/RegisterInput.vue'
+import UserCreateInput from '@/components/UserCreateInput.vue'
 
 export default {
 name: 'LoginView',
@@ -28,7 +28,7 @@ data(){
     }
 },
 components: {
-    RegisterInput
+    UserCreateInput
 },
 methods:{
     idpress(){
