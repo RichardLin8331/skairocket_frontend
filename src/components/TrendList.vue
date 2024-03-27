@@ -5,7 +5,8 @@
 }
 .card-body {
     background: white;
-    position:relative; height:300px; 
+    position:relative; 
+    height:500px; 
     overflow-y:scroll; 
 }
 </style>

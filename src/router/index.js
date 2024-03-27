@@ -31,8 +31,13 @@ const routes = [
   {
     path: '/dev',
     name: 'dev',
-    component: () => import('@/views/DevPageView.vue'),
+    component: () => import('@/views/SearchViewDev.vue'),
+  },
+  {
+    path: '/stockinfo/:stocknum',
+    component: () => import('@/views/StockInfoView.vue'),
   }
+
 ]
 
 const router = new VueRouter({

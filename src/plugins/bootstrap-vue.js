@@ -28,3 +28,6 @@ Vue.use(VBScrollspyPlugin)
 
 import { TablePlugin } from 'bootstrap-vue'
 Vue.use(TablePlugin)
+
+import { ImagePlugin } from 'bootstrap-vue'
+Vue.use(ImagePlugin)

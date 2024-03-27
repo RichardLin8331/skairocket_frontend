@@ -31,4 +31,12 @@ const apiUserCreate = async (username_create, password_create) => {
     }).catch(err => {console.log(err.data)})
 }
 
-export {apiUserAuth, apiUserCreate}
+const apiUserProtected = async() => {
+    await  userRequest.post( '/user_router/user-protected', {})
+  .then(response => {
+    // Set the access token in the component state
+        alert(response.data.message)
+    })
+  };
+
+export {apiUserAuth, apiUserCreate, apiUserProtected}
