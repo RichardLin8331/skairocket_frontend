@@ -7,7 +7,7 @@
             </b-col>
             <b-col>
                 <h2>ABOUT</h2>
-                <b-img src="@/assets/logo.png" fluid-grow alt="Responsive image"></b-img>
+                <b-img src="@/assets/pictures/AIrocket.png" fluid-grow alt="Responsive image"></b-img>
                 <p>
                     skAIrocKet aims to discover stocks with high potential of energy.
                 </p>
