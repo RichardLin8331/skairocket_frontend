@@ -13,7 +13,7 @@
                 <br/><br/><br/>
 
                 <nav class = "helpstyle">
-                    <router-link to="UserCreate" >Register</router-link> | 
+                    <router-link to="register" >Register</router-link> | 
                     <router-link to="#" >Forget Password</router-link> 
                 </nav>
             </b-col>

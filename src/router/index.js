@@ -24,18 +24,23 @@ const routes = [
     component: () => import('@/views/LoginView.vue')
   },
   {
-    path: '/UserCreate',
-    name: 'UserCreate',
+    path: '/register',
+    name: 'register',
     component: () => import('@/views/UserCreateView.vue'),
   },
   {
-    path: '/dev',
-    name: 'dev',
-    component: () => import('@/views/SearchViewDev.vue'),
+    path: '/search_stock',
+    name: 'search',
+    component: () => import('@/views/SearchStockView.vue'),
   },
   {
-    path: '/stockinfo/:stocknum',
+    path: '/stock_info/:stocknum',
     component: () => import('@/views/StockInfoView.vue'),
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: () => import('@/views/ProfileView.vue'),
   }
 
 ]

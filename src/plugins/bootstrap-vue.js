@@ -17,6 +17,9 @@ Vue.component("b-button", BButton);
 import { FormPlugin } from 'bootstrap-vue';
 Vue.use(FormPlugin);
 
+import { FormSelectPlugin } from 'bootstrap-vue'
+Vue.use(FormSelectPlugin)
+
 import { LayoutPlugin } from 'bootstrap-vue'
 Vue.use(LayoutPlugin)
 

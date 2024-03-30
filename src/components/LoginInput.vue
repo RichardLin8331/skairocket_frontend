@@ -60,7 +60,7 @@
       methods: {
         onSubmit(event) {
           event.preventDefault()
-          apiUserAuth().then(data => this.nottrue = data)
+          apiUserAuth(this.form.username, this.form.password).then(data => this.nottrue = data)
           .then(()=> {
             console.log(this.nottrue)
             

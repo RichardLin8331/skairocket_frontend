@@ -13,7 +13,8 @@
 
 <script>
 
-  import { apiUserCreate } from "../apis/userapi.js";
+  import router from "@/router";
+//import { apiUserCreate } from "../apis/userapi.js";
 
   export default {
     data() {
@@ -29,9 +30,12 @@
     },
     methods: {
       onSubmit(event) {
+        
         event.preventDefault()
-        apiUserCreate(this.form.stocknum)
-        alert(JSON.stringify(this.form))
+        var stockpath = '/stock_info/' + this.form.stocknum
+        router.push({path: stockpath})
+        // apiUserCreate(this.form.stocknum)
+        // alert(JSON.stringify(this.form))
       },
       
     }

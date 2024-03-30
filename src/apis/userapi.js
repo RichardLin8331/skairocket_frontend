@@ -1,30 +1,34 @@
 
 import axios from 'axios'
 import store from '../store'
+import router from '@/router'
 
 const userRequest = axios.create(
     { baseURL: 'http://127.0.0.1:8899' }
 )
 
-const apiUserAuth = async (username) => {
-    await  userRequest.post( '/LoginAuth', {})
-    .then(() => {
-        let payload = {'uname': username, 'ulog': true}
+const apiUserAuth = async (username, password) => {
+    await  userRequest.post( '/user-login', {'username': username, 'password': password})
+    .then((response) => {
+        let payload = {'uname': username, 'ulog': true, 'profile_picture': response.data.profile_picture, 'favorite_list': response.data.favorite_list}
         store.dispatch("login_act", payload)
-        
+        router.push({path: '/'})
         
     }).catch(err => {console.log(err.data)})
 }
 
-const apiUserCreate = async (username_create, password_create) => {
+const apiUserCreate = async (form_create) => {
     await  userRequest.post( '/user-create', {
-        'username': username_create,
-        'password': password_create
+        'username': form_create.username,
+        'password': form_create.password,
+        'email': form_create.email,
+        'profile_picture': form_create.profile_picture,
     })
     .then((response) => {
         console.log(response.data.user_create_result)
         if(response.data.user_create_result == 'true') {
             alert("Successfully Create New User")
+            router.push({path: '/login'})
         }
         
         
@@ -39,4 +43,10 @@ const apiUserProtected = async() => {
     })
   };
 
-export {apiUserAuth, apiUserCreate, apiUserProtected}
+  const apiUserLogout = () => {
+    store.dispatch("reset_act")
+    router.push("/")
+    location.reload()
+  }
+
+export {apiUserAuth, apiUserCreate, apiUserProtected, apiUserLogout}

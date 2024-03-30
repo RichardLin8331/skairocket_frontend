@@ -1,7 +1,7 @@
 <template>
     <b-container >
         <h1>Register Page</h1>
-        <img alt="Vue logo" src="../assets/logo.png" class="headimg"> <br/>
+        
         
         <UserCreateInput></UserCreateInput>
         <br/><br/><br/>

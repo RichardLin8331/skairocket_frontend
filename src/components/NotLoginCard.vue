@@ -1,16 +1,17 @@
 <template>
     <b-card 
+    style="width: 300px; height: 600px;"
     title="Not Logged in Yet!"
-    img-src="@/assets/logo.png"
-    img-alt="Image"
-    img-top
-    style="max-width: 25rem;"
     class="mb-2">
+        <b-img src="@/assets/pictures/graysmile.png"  style="max-width: 250px;"></b-img>
+        <br/><br/><br/>
         <b-card-text>
             Click Button to go Login Page.
         </b-card-text>
-
+        <br/><br/><br/>
         <b-button href="/login" variant="primary">Login Page</b-button>
+        <b-card-text>  </b-card-text>
+        <b-button href="/UserCreate" variant="primary">Register Page</b-button>
 
     </b-card>
 
@@ -21,3 +22,4 @@
 export default {}
 
 </script>
+
