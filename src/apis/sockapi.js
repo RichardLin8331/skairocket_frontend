@@ -11,7 +11,7 @@ const apiSearchStock = (stocknum) => {
         localStorage.setItem('prediction_confidence', "20%")
     } else {
         localStorage.setItem('predicted_price', 30)
-        localStorage.setItem('prediction_confidence', "15%")
+        localStorage.setItem('prediction_confidence', "15%" )
     }
 }
 
