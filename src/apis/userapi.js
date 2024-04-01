@@ -4,16 +4,19 @@ import store from '../store'
 import router from '@/router'
 
 const userRequest = axios.create(
-    { baseURL: 'http://127.0.0.1:8899' }
+    { baseURL: 'http://127.0.0.1:8899'}
 )
-
+userRequest.defaults.withCredentials = true
 const apiUserAuth = async (username, password) => {
     await  userRequest.post( '/user-login', {'username': username, 'password': password})
     .then((response) => {
-        let payload = {'uname': username, 'ulog': true, 'profile_picture': response.data.profile_picture, 'favorite_list': response.data.favorite_list}
+        let payload = {'uname': username, 'ulog': true, 'profile_picture': response.data.profile_picture, 'accesstoken': response.data.accesstoken, 'favorite_list': response.data.favorite_list, }
         store.dispatch("login_act", payload)
-        router.push({path: '/'})
         
+        
+    }).then(()=> {
+        router.push({path: '/'})
+        location.reload()
     }).catch(err => {console.log(err.data)})
 }
 

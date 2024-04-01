@@ -6,8 +6,7 @@
             <b-button v-else v-on:click="addfavoritebutton">Add Favorite </b-button>
 
         </div>
-        <p>Price is {{ predicted_price }}</p>
-        <p>Confidence is {{ prediction_confidence }}</p>
+        <b-table :items="items"></b-table>
         
     </div>
 </template>
@@ -20,8 +19,10 @@ export default {
         return {
             stocknum : this.$route.params.stocknum,
             logged_in: this.$store.getters.get_login,
-            predicted_price: 0,
-            prediction_confidence: "",
+            items: [
+                {predicted_price: 0, prediction_confidence: 0,}
+            ],
+            
         }
         
     },
@@ -40,12 +41,32 @@ export default {
             event.preventDefault()
             apiDeleteFavorite(this.$route.params.stocknum)
         },
+        
     },
-    created(){
+    created() {
         apiSearchStock(this.$route.params.stocknum)
-        this.predicted_price = localStorage.getItem('predicted_price')
-        this.prediction_confidence = localStorage.getItem('prediction_confidence')
+        .then(() => {
+            this.items[0].predicted_price = localStorage.getItem('predicted_price')
+            this.items[0].prediction_confidence = localStorage.getItem('prediction_confidence')
+        })
+        
+        
+        
     }
+    
     
 }
 </script>
+
+<style lang="scss" scoped>
+.card_title {
+    background:linear-gradient(to right, rgba(199, 100, 229, 0.5), rgba(238, 27, 227, 0.5));
+    
+}
+.card-body {
+    background: white;
+    position:relative; 
+    height:500px; 
+    overflow-y:scroll; 
+}
+</style>

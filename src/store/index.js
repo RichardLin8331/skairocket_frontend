@@ -6,11 +6,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    loggined_in: true,
-    username: "Jackie",
+    loggined_in: false,
+    username: "",
     accesstoken: "",
-    profile_picture: "bluesmile.png",
-    favorite_list: ['2330'],
+    profile_picture: "",
+    favorite_list: [],
 
 
   
@@ -40,6 +40,7 @@ export default new Vuex.Store({
       state.loggined_in = payload.ulog
       state.username = payload.uname
       state.profile_picture = payload.profile_picture
+      state.accesstoken = payload.accesstoken
       state.favorite_list = payload.favorite_list
       console.log(state.loggined_in)
     },

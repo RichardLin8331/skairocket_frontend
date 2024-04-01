@@ -1,7 +1,7 @@
 <template>
-    <b-continer>
+    <b-container>
         <StockInfo></StockInfo>
-    </b-continer>
+    </b-container>
     
 </template>
 

@@ -9,7 +9,7 @@
             Hello {{ username }}, have a nice day.
         </b-card-text>
         <br/><br/><br/>
-        <b-button href="/login" variant="primary">Profile Page</b-button>
+        <b-button href="/profile" variant="primary">Profile Page</b-button>
 
     </b-card>
 

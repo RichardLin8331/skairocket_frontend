@@ -11,7 +11,7 @@
         <br/><br/><br/>
         <b-button href="/login" variant="primary">Login Page</b-button>
         <b-card-text>  </b-card-text>
-        <b-button href="/UserCreate" variant="primary">Register Page</b-button>
+        <b-button href="/register" variant="primary">Register Page</b-button>
 
     </b-card>
 
