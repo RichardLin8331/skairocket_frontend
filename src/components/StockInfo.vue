@@ -6,7 +6,11 @@
             <b-button v-else v-on:click="addfavoritebutton">Add Favorite </b-button>
 
         </div>
-        <b-table :items="items"></b-table>
+        <b-table :items="items">
+            <template #cell(prediction_confidence)="data">
+                {{ data.value }} %
+            </template>
+        </b-table>
         
     </div>
 </template>

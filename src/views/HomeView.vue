@@ -9,7 +9,7 @@
                 <h2>ABOUT</h2>
                 <b-img src="@/assets/pictures/AIrocket.png" fluid-grow alt="Responsive image" style="max-width: 350px;"></b-img>
                 <p>
-                    skAIrocKet aims to discover stocks with high potential of energy. 
+                    Let skAIrocKet help you find stocks with high potential!
                 </p>
             </b-col>
             <b-col>
