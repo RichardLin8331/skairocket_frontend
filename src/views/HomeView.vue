@@ -6,7 +6,7 @@
                 <TrendList></TrendList>
             </b-col>
             <b-col>
-                <h2>ABOUT</h2>
+                <br>
                 <b-img src="@/assets/pictures/AIrocket.png" fluid-grow alt="Responsive image" style="max-width: 350px;"></b-img>
                 <p>
                     Let skAIrocKet help you find stocks with high potential!

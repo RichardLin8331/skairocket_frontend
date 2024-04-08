@@ -30,11 +30,7 @@
   
   
       </b-form>
-      <b-card class="mt-3" header="Form Data Result">
-        <pre class="m-0">{{ form }}</pre>
-        <p>not true is {{ nottrue }}</p>
-        <p>{{ $store.getters.get_login }}</p>
-      </b-card>
+      
     </div>
   </template>
   
@@ -67,7 +63,7 @@
           })
           
           
-          alert(JSON.stringify(this.form))
+          //alert(JSON.stringify(this.form))
         },
         
       }

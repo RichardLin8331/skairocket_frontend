@@ -9,8 +9,8 @@ basicRequest.defaults.withCredentials = true
 const apiSearchStock = async(stocknum) => {
     await basicRequest.post('/search-stock', {'stocknum': stocknum})
     .then((response) => {
-        localStorage.setItem('predicted_price', response.data.predictedprice)
-        localStorage.setItem('prediction_confidence', response.data.predictionconfidence)
+        localStorage.setItem('predicted_price', response.data.predicted_price)
+        localStorage.setItem('prediction_confidence', response.data.prediction_confidence)
     })
     
 }
@@ -33,6 +33,7 @@ user_stockRequest.interceptors.request.use (async function (config) {
         return Promise.reject(error)
 })
 
+// Refreshtoken reference: https://www.dotblogs.com.tw/wasichris/2020/10/25/223728
 user_stockRequest.interceptors.response.use(function (response) {
     return response
   }, function (error) {
@@ -53,8 +54,8 @@ user_stockRequest.interceptors.response.use(function (response) {
           {
             // 當不是 refresh token 作業發生 401 才需要更新 access token 並重發
             // 如果是就略過此刷新 access token 作業，直接不處理(因為 catch 已經攔截處理更新失敗的情況了)
-            const refreshTokeUrl = 'http://localhost:8899/refresh'
-            if (error.config.url !== refreshTokeUrl) {
+            const refreshTokenUrl = 'http://localhost:8899/refresh'
+            if (error.config.url !== refreshTokenUrl) {
               // 原始 request 資訊
               const originalRequest = error.config
   
