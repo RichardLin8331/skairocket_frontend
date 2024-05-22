@@ -1,5 +1,6 @@
 # skairocket_frontend
 ## Project Introduction
+![rocket](https://github.com/RichardLin8331/skairocket_frontend/blob/main/src/assets/pictures/AIrocket.png?raw=true)
 + The main objective of this project is to develop a tool capable of predicting stocks with potential for rapid growth, and to provide a web UI for user interaction. Users can input the desired stock number into the web UI, and the website will display the predicted next-day stock price along with the confidence score for the prediction.   
 + If users have registered accounts and logged in, they can choose to add their favorite stocks for convenience in daily checking. User information is managed using MySQL and MongoDB databases.
     
@@ -12,7 +13,8 @@
 + The frontend of the website is developed using the Vue framework along with the Bootstrap-Vue package to create a pleasing user interface. Axios is used for communication with the backend using REST API.
     
 + Finally, the entire project is packaged into Docker images using the two-stage build method to produce a smaller image. Docker Compose files is used to simplify the deployment process. With Docker configured on any machine, the entire website deployment can be completed with simple commands.
- 
+
+![skAI UI](https://github.com/RichardLin8331/skairocket_frontend/blob/main/src/assets/pictures/skAIrocKet_WebUI.png?raw=true)
 
 ## Tech Stack
 ### Backend
